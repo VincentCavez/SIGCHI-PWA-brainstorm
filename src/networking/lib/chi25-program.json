@@ -1,0 +1,168 @@
+{
+  "papers": [
+    {
+      "id": "188303",
+      "title": "From Scores to Careers: Understanding AI’s Role in Supporting Collaborative Family Decision-Making in Chinese College Applications",
+      "authors": [
+        "186797",
+        "183903",
+        "185608",
+        "184262",
+        "183943",
+        "184440"
+      ],
+      "authorNames": [
+        "Si Chen",
+        "Jingyi Xie",
+        "Ge Wang",
+        "Haizhou Wang",
+        "Haocong Cheng",
+        "Yun Huang"
+      ],
+      "track": "Papers",
+      "doi": "https://doi.org/10.1145/3706598.3713341",
+      "url": "https://programs.sigchi.org/chi/2025/program/content/188303"
+    },
+    {
+      "id": "188995",
+      "title": "Evaluating Non-AI Experts' Interaction with AI: A Case Study In Library Context",
+      "authors": [
+        "183264",
+        "186185",
+        "183873",
+        "184633",
+        "184440"
+      ],
+      "authorNames": [
+        "Qingxiao Zheng",
+        "Minrui Chen",
+        "Hyanghee Park",
+        "Zhongwei Xu",
+        "Yun Huang"
+      ],
+      "track": "Papers",
+      "doi": "https://doi.org/10.1145/3706598.3714219",
+      "url": "https://programs.sigchi.org/chi/2025/program/content/188995"
+    },
+    {
+      "id": "189120",
+      "title": "Lessons from Real-World Settings: What Makes It Uniquely Difficult to Design Cognitive Training Programs for Children with Autism Spectrum Disorder and Other Developmental Disabilities",
+      "authors": [
+        "183873",
+        "187794",
+        "188083",
+        "183674",
+        "187021",
+        "183527",
+        "184440"
+      ],
+      "authorNames": [
+        "Hyanghee Park",
+        "Sol Bee Jung",
+        "Young Hee Byun",
+        "Daehwan Ahn",
+        "Chan Woo Park",
+        "Sunjoo Byun",
+        "Yun Huang"
+      ],
+      "track": "Papers",
+      "doi": "https://doi.org/10.1145/3706598.3713965",
+      "url": "https://programs.sigchi.org/chi/2025/program/content/189120"
+    },
+    {
+      "id": "189201",
+      "title": "Chatbots for Data Collection in Surveys: A Comparison of Four Theory-Based Interview Probes",
+      "authors": [
+        "185939",
+        "186641",
+        "188107",
+        "182890"
+      ],
+      "authorNames": [
+        "Rune Jacobsen",
+        "Samuel Cox",
+        "Carla Griggio",
+        "Niels van Berkel"
+      ],
+      "track": "Papers",
+      "doi": "https://doi.org/10.1145/3706598.3714128",
+      "url": "https://programs.sigchi.org/chi/2025/program/content/189201"
+    },
+    {
+      "id": "189388",
+      "title": "EuterPen: Unleashing Creative Expression in Music Score Writing",
+      "authors": [
+        "185984",
+        "184988",
+        "183114",
+        "185606"
+      ],
+      "authorNames": [
+        "Vincent Cavez",
+        "Catherine Letondal",
+        "Caroline Appert",
+        "Emmanuel Pietriga"
+      ],
+      "track": "Papers",
+      "doi": "https://doi.org/10.1145/3706598.3713488",
+      "url": "https://programs.sigchi.org/chi/2025/program/content/189388"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "195027",
+      "name": "Data Interpretation and Storytelling",
+      "room": "G418+G419",
+      "time": "Mon, 28 Apr · 23:10–00:40 JST",
+      "papers": [
+        "189201"
+      ],
+      "url": "https://programs.sigchi.org/chi/2025/program/session/195027",
+      "startsAt": 1745849400000
+    },
+    {
+      "id": "195099",
+      "name": "Music",
+      "room": "G314+G315",
+      "time": "Mon, 28 Apr · 23:10–00:40 JST",
+      "papers": [
+        "189388"
+      ],
+      "url": "https://programs.sigchi.org/chi/2025/program/session/195099",
+      "startsAt": 1745849400000
+    },
+    {
+      "id": "197231",
+      "name": "Working with AI",
+      "room": "G401",
+      "time": "Wed, 30 Apr · 18:00–19:30 JST",
+      "papers": [
+        "188995"
+      ],
+      "url": "https://programs.sigchi.org/chi/2025/program/session/197231",
+      "startsAt": 1746003600000
+    },
+    {
+      "id": "195003",
+      "name": "Assistive Technologies",
+      "room": "G314+G315",
+      "time": "Thu, 01 May · 01:20–02:50 JST",
+      "papers": [
+        "189120"
+      ],
+      "url": "https://programs.sigchi.org/chi/2025/program/session/195003",
+      "startsAt": 1746030000000
+    },
+    {
+      "id": "195031",
+      "name": "Decision Making with AI",
+      "room": "Annex Hall F203",
+      "time": "Thu, 01 May · 18:00–19:30 JST",
+      "papers": [
+        "188303"
+      ],
+      "url": "https://programs.sigchi.org/chi/2025/program/session/195031",
+      "startsAt": 1746090000000
+    }
+  ]
+}

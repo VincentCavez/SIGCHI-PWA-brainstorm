@@ -1,0 +1,569 @@
+/* Extrait de anranxu/sigchi-networking-demo (app/globals.css), limité à la page My profile,
+   et préfixé par .np pour ne pas toucher au reste du prototype. Généré par un script, ne pas retoucher à la main sans raison. */
+.np { color-scheme: light; --nav: #282a40; --text: #26283a; --muted: #60687a; --line: #dfe2eb; --blue: #4054aa; --pale: #eff1fa; --canvas: #f5f6fa; font-family: "Segoe UI", Arial, sans-serif; color: var(--text); background: var(--canvas); font-size: 0.9375rem; }
+.np button, .np input, .np select { font: inherit; }
+.np button { cursor: pointer; color: inherit; }
+.np button:disabled { cursor: default; opacity: 0.53; }
+.np button:focus-visible, .np a:focus-visible, .np input:focus-visible, .np select:focus-visible { outline: 3px solid #788bea; outline-offset: 3px; }
+.np a { color: var(--blue); }
+.np h1, .np h2, .np h3, .np p { margin: 0; }
+/* Le reste du prototype remet les titres en poids normal ; la démo garde le gras du navigateur. */
+.np h2, .np h3, .np h4 { font-weight: 700; }
+.np h2 { font-size: 1.312rem; letter-spacing: -0.035em; }
+.np h3 { font-size: 1.062rem; letter-spacing: -0.025em; }
+.np p { color: var(--muted); line-height: 1.55; }
+.np small { color: var(--muted); font-size: 0.8125rem; }
+.np button, .np select, .np input { touch-action: manipulation; }
+.np svg { flex: none; }
+.np .drawerTop span { display: block; }
+.np .row, .np .formRow, .np .recordHead, .np .links, .np .drawerTop, .np .eyebrow, .np .sessionControls, .np .chat .formRow, .np .check { display: flex; align-items: center; gap: 10px; }
+.np select, .np .chat input { background: white; color: var(--text); border: 1px solid #ccd1df; padding: 9px 11px; border-radius: 7px; max-width: 100%; }
+.np .canvas { max-width: 1460px; margin: 0 auto; padding: 27px clamp(20px, 3.5vw, 60px) 60px; }
+.np .outlined, .np .primary, .np .iconBtn, .np .textBtn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; }
+.np .outlined, .np .primary { border: 1px solid #cdd2e0; background: white; border-radius: 7px; padding: 9px 13px; font-weight: 600; font-size: 0.875rem; min-height: 38px; }
+.np .outlined:hover, .np .iconBtn:hover { background: #f0f2fa; }
+.np .primary { color: white; background: var(--blue); border-color: var(--blue); }
+.np .primary:hover { background: #36489b; }
+.np .recordHead, .np .drawerTop { justify-content: space-between; }
+.np .textBtn, .np .iconBtn { border: 0; background: transparent; }
+.np .iconBtn { display: inline-grid; place-items: center; padding: 5px; border-radius: 6px; }
+.np .panel { background: white; border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 2px 5px #25284406; }
+.np .avatar { width: 43px; height: 43px; border-radius: 50%; flex: none; display: inline-grid; place-items: center; font-weight: 650; font-size: 0.9375rem; letter-spacing: 0.01em; }
+.np .avatar.large { width: 56px; height: 56px; font-size: 1.25rem; }
+.np .lilac, .np .periwinkle { background: #e5e2fa; color: #57418c; }
+.np .teal, .np .mint { background: #d7eee8; color: #246455; }
+.np .blue { background: #dfe9fb; color: #395a8f; }
+.np .rose { background: #f5e0eb; color: #844564; }
+.np .amber { background: #f7eacb; color: #825e18; }
+.np .chips { display: flex; gap: 5px; flex-wrap: wrap; }
+.np .chips span { border-radius: 5px; padding: 4px 7px; font-size: 0.75rem; color: #49537a; background: #f0f2f9; line-height: 1.2; }
+.np .inlineNotice { padding: 14px; border: 1px solid var(--line); border-radius: 8px; background: white; margin-top: 10px; }
+.np .check, .np .filterPanel .check { display: flex; align-items: center; gap: 8px; font-size: 0.875rem; margin: 8px 0; }
+.np .check input { accent-color: var(--blue); }
+.np .textBtn { color: var(--blue); }
+.np .reading { max-width: 820px; display: grid; gap: 16px; }
+.np .record { padding: 22px; }
+.np .record > p, .np .details h2 + p, .np .details section > p { margin: 6px 0 12px; }
+.np .recordHead .row .tile { background: var(--pale); color: var(--blue); display: grid; place-items: center; border-radius: 8px; width: 42px; height: 42px; }
+.np .recordHead small { display: block; margin-top: 4px; }
+.np .record .muted, .np .hint { font-size: 0.8125rem; }
+.np .lines { padding: 0; list-style: none; margin: 12px 0 0; }
+.np .lines li { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; border-top: 1px solid #ebedf3; line-height: 1.45; }
+.np .lines svg { color: var(--muted); margin-top: 3px; }
+.np .lines .textBtn { display: flex; margin-top: 3px; }
+.np .reading form label { margin: 13px 0; }
+.np .formRow { flex-wrap: wrap; }
+.np .api .formRow select, .np .chat input { flex: 1; min-width: 0; }
+.np .eyebrow { font-size: 0.8125rem; color: var(--muted); margin-bottom: 6px; }
+.np .sessionControls { flex-wrap: wrap; gap: 18px; margin: 8px 0; }
+.np .textBtn { font-size: 0.875rem; font-weight: 600; padding: 3px 0; }
+.np .textBtn:hover { text-decoration: underline; }
+.np .drawer { border: 0; border-left: 1px solid var(--line); padding: 0; margin: 0 0 0 auto; max-height: none; height: 100dvh; width: min(440px, 95vw); color: var(--text); box-shadow: -12px 0 45px #20253f1f; }
+.np .drawer::backdrop { background: #15172d60; }
+.np .drawerTop { padding: 14px 20px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 0.875rem; }
+.np .details { padding: 22px; }
+.np .details > h2 { margin-top: 12px; }
+.np .details .bio, .np .details .formRow { margin: 14px 0; }
+.np .details section { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+.np .links { flex-wrap: wrap; margin: 8px 0; }
+.np .links a { display: inline-flex; align-items: center; gap: 5px; font-size: 0.875rem; font-weight: 600; }
+.np .empty { padding: 32px; text-align: center; color: var(--muted); }
+.np .empty > svg { color: var(--blue); margin-bottom: 7px; }
+.np .empty p, .np .empty button { margin-top: 7px; }
+.np .chatLayout { display: grid; grid-template-columns: minmax(175px, 30%) minmax(0, 1fr); gap: 15px; }
+.np .contacts, .np .chat { padding: 18px; }
+.np .contacts button { display: flex; align-items: center; gap: 9px; border: 0; background: transparent; width: 100%; padding: 8px; border-radius: 6px; text-align: left; }
+.np .contacts .avatar { width: 32px; height: 32px; font-size: 0.75rem; }
+.np .contacts h2, .np .chat h2 { margin-bottom: 12px; }
+.np .contacts .selected { background: var(--pale); }
+.np .chatBody { min-height: 150px; display: flex; flex-direction: column; gap: 8px; padding: 12px 0; }
+.np .bubble { background: var(--pale); align-self: flex-start; padding: 7px 10px; border-radius: 8px; max-width: 92%; overflow-wrap: anywhere; white-space: pre-wrap; }
+.np .bubble small { display: block; }
+.np .mine { align-self: flex-end; background: #e2edfa; }
+.np .toast { position: fixed; bottom: 24px; right: 24px; background: #292d48; color: white; padding: 11px 16px; border-radius: 8px; display: flex; gap: 9px; align-items: center; z-index: 10; }
+.np .alert { background: #fff0ed; border: 1px solid #ecc6bd; padding: 12px; border-radius: 8px; margin-bottom: 14px; }
+@media (max-width: 1170px) {
+  .np .canvas { padding-inline: 24px; }
+}
+@media (max-width: 740px) {
+  .np .canvas { padding-inline: 18px; }
+  .np .chatLayout { grid-template-columns: 1fr; }
+  .np .contacts { max-height: 180px; overflow: auto; }
+}
+@media (max-width: 500px) {
+  .np .record { padding: 16px; }
+  .np .canvas { padding-top: 19px; }
+  .np .drawer { width: 96vw; }
+  .np .searchRow .outlined { padding-inline: 9px; }
+  .np .contacts, .np .chat { padding: 13px; }
+  .np .api .formRow { align-items: stretch; flex-direction: column; }
+}
+.np { --nav: #282a3d; --blue: #315ecb; --canvas: #f4f5f9; --text: #212837; --muted: #5c6475; font-family: Montserrat, "Segoe UI", Arial, sans-serif; font-size: 1rem; }
+.np .canvas { max-width: none; padding: 0 0 45px; }
+.np .canvas > .reading, .np .canvas > .chatLayout, .np .canvas > .api, .np .canvas > .alert, .np .canvas > .record { margin: 20px 30px; }
+.np .demoContext { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 4px 30px 9px; background: white; color: var(--muted); font-size: 0.75rem; }
+.np .demoContext button { font-size: 0.75rem; }
+.np .joinCard { padding: 22px; }
+.np .joinCard h2 { font-weight: 600; }
+.np .joinCard p { margin: 7px 0 16px; }
+.np .joinCard label { display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 6px; }
+.np .joinCard .formRow input { flex: 1; min-width: 120px; padding: 10px 12px; border: 1px solid #ccd1df; border-radius: 7px; }
+.np .personChoices { display: flex; gap: 8px 16px; flex-wrap: wrap; margin: 0 0 10px; }
+.np .personChoices label { font-size: 0.875rem; display: flex; align-items: center; gap: 5px; }
+.np .checkStatus { border-radius: 7px; background: #edf2fc; color: #344566; padding: 10px 12px; margin: 11px 0; }
+.np .checkInPanel .hint { margin: 10px 0 0; }
+.np .previewWho { display: flex; align-items: center; gap: 10px; padding: 12px 20px; border-bottom: 1px solid var(--line); font-size: 0.875rem; }
+.np .joinCard .primary, .np .permissionRow .outlined { white-space: nowrap; }
+.np .demoContext > span { line-height: 1.4; }
+.np .record > .textBtn + .textBtn { margin-left: 12px; }
+@media (max-width: 680px) {
+  .np .demoContext { padding: 3px 14px 9px; align-items: flex-start; }
+  .np .demoContext .textBtn { white-space: nowrap; }
+  .np .canvas > .reading, .np .canvas > .chatLayout, .np .canvas > .api { margin: 14px; }
+  .np .joinCard { padding: 17px; }
+}
+.np .sessionControls { align-items: flex-start; }
+.np .sessionControls > .permissionRow { flex: 1; min-width: min(100%, 250px); }
+.np .chat, .np .chatLayout > *, .np .contacts, .np .reading, .np .formRow > *, .np .record { min-width: 0; }
+.np .details, .np .bubble, .np .record h2, .np .contacts button { overflow-wrap: anywhere; }
+.np .check input, .np .personChoices input { width: 18px; height: 18px; accent-color: var(--blue); }
+.np .personChoices label { min-height: 32px; }
+.np .iconBtn, .np .textBtn { min-height: 32px; }
+.np .iconBtn { min-width: 32px; }
+.np .personChoices label:has(:focus-visible) { outline: 2px solid #4054aa; outline-offset: 2px; }
+.np .previewWho select { min-width: 0; }
+.np .demoContext .textBtn { text-align: start; }
+@media (max-width: 680px) {
+  .np .demoContext { flex-wrap: wrap; gap: 2px; }
+  .np .joinCard input, .np .formRow input, .np select { font-size: 1rem; }
+  .np .formRow { flex-wrap: wrap; }
+  .np .iconBtn, .np .outlined, .np .primary, .np .textBtn, .np .contacts button, .np .personChoices label, .np .check { min-height: 44px; }
+  .np .iconBtn { min-width: 44px; }
+  .np .joinCard input { min-height: 44px; }
+  .np .joinCard .formRow { align-items: stretch; }
+  .np .joinCard .formRow input { max-width: 100%; }
+  .np .sessionControls .permissionRow { flex-basis: 100%; }
+  .np .previewWho { flex-wrap: wrap; }
+  .np .demoContext .textBtn { min-height: 36px; }
+  .np .formRow select { min-width: 0; }
+}
+@media (max-width: 380px) {
+  .np .chat .formRow input { width: 100%; flex-basis: 100%; }
+}
+@media (max-width: 990px) {
+  .np .canvas { display: flex; flex-direction: column; }
+  .np .canvas > .demoContext { order: 2; background: transparent; padding: 14px 14px 20px; margin-top: 7px; border-top: 1px solid var(--line); font-size: 0.75rem; line-height: 1.5; justify-content: flex-start; align-items: center; }
+  .np .canvas > .demoContext button { font-size: 0.8rem; }
+  .np .canvas > .reading, .np .canvas > .chatLayout, .np .canvas > .api { min-width: 0; }
+  .np .canvas > * { min-width: 0; }
+}
+.np .research h4 { margin: 17px 0 4px; font-size: 0.95rem; }
+.np .research ul { padding: 0; margin: 5px 0 10px; list-style: none; }
+.np .research li { margin: 8px 0; }
+.np .research li small { display: block; font-weight: 600; }
+.np .research a, .np .lines strong a { color: #224ca7; text-underline-offset: 0.14em; }
+.np .sourceLinks { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 5px; font-size: 0.875rem; }
+.np .research p { margin: 6px 0 8px; }
+.np .research a, .np .lines a, .np .record h2 { overflow-wrap: anywhere; }
+.np .reading { grid-template-columns:minmax(0,1fr) }
+.np .reading>.record { min-width:0 }
+.np .recordHead { flex-wrap:wrap }
+.np .recordHead>.row { min-width:0;flex-wrap:wrap }
+.np .recordHead .row>div { min-width:0;overflow-wrap:anywhere }
+.np .recordHead>.outlined { max-width:100%;white-space:normal }
+.np .recordHead .row h3 { overflow-wrap:anywhere }
+.np .simpleProfile, .np .simpleSignup { max-width: 720px; }
+.np .profileMain, .np .simpleSignup { padding: clamp(16px, 3vw, 28px); }
+.np .profileIdentity { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.np .profileIdentity > div { min-width: 0; }
+.np .profileIdentity h2, .np .profileIdentity p { overflow-wrap: anywhere; }
+.np .profileIdentity p { font-size: 0.9rem; margin-top: 4px; }
+.np .audienceChoice, .np .audienceMembers { border: 0; margin: 0; padding: 0; min-width: 0; }
+.np .audienceChoice legend { font-size: 1.04rem; font-weight: 650; padding: 0; margin-bottom: 10px; }
+.np .audienceOptions { display: flex; flex-wrap: wrap; gap: 7px; }
+.np .audienceOptions label, .np .simpleSignup .audienceOptions label { position: relative; display: inline-flex; align-items: center; gap: 8px; margin: 0; padding: 9px 13px; min-height: 44px; border: 1px solid #c8d0df; border-radius: 7px; background: white; color: #35405a; font-size: 0.88rem; font-weight: 520; cursor: pointer; }
+.np .audienceOptions label.chosen { color: #23469a; background: #edf2ff; border: 2px solid #4768bf; padding: 8px 12px; font-weight: 650; }
+.np .audienceOptions label input[type="radio"] { position: static; width: 16px; height: 16px; flex: none; margin: 0; accent-color: #315ecb; }
+.np .audienceOptions label:has(input:focus-visible) { outline: 3px solid #244997; outline-offset: 3px; }
+.np .audienceMembers { margin-top: 12px; }
+.np .audienceMembers legend { font-size: 0.875rem; font-weight: 600; margin-bottom: 5px; }
+.np .audienceMembers .personChoices { margin: 0; }
+.np .audienceMembers .personChoices label, .np .simpleSignup .personChoices label { display: inline-flex; align-items: center; gap: 7px; font-weight: 450; font-size: 0.875rem; min-height: 38px; margin: 0; cursor: pointer; }
+.np .sharingExplanation, .np .roomEditor > p { font-size: 0.875rem; margin: 11px 0; line-height: 1.5; }
+.np .profileMain .textBtn { font-size: 0.875rem; }
+.np .profileExtras { padding: 0 18px; }
+.np .profileDisclosure { min-width: 0; }
+.np .profileDisclosure + .profileDisclosure { border-top: 1px solid var(--line); }
+.np .profileDisclosure summary, .np .listSharing summary { cursor: pointer; }
+.np .profileDisclosure summary { display: flex; align-items: center; gap: 11px; padding: 15px 2px; min-height: 54px; list-style: none; font-weight: 590; }
+.np .profileDisclosure summary::-webkit-details-marker { display: none; }
+.np .disclosureIcon { color: #50688f; display: inline-flex; }
+.np .disclosureLabel { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.np .disclosureLabel small { font-weight: 400; margin-left: 9px; font-size: 0.8rem; }
+.np .profileDisclosure[open] > summary > svg { transform: rotate(180deg); }
+.np .disclosureBody { padding: 0 2px 16px; }
+.np .audienceSelect, .np .reading .linksForm > label, .np .simpleSignup .nameField { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; margin: 8px 0; font-size: 0.875rem; font-weight: 600; }
+.np .audienceSelect select, .np .simpleSignup .nameField input, .np .linksForm input { min-width: 0; max-width: 100%; font: inherit; font-weight: 450; border: 1px solid #c8d0df; border-radius: 6px; background: white; color: var(--text); min-height: 44px; padding: 8px 11px; }
+.np .simpleSignup .nameField { margin: 17px 0 20px; }
+.np .simpleSignup .nameField input, .np .reading .linksForm input { width: 100%; margin: 0; }
+.np .simpleSignup > .primary { margin-top: 18px; }
+.np .roomEditor .formRow { margin-top: 12px; }
+.np .roomEditor .hint, .np .listSharing .hint { font-size: 0.83rem; }
+.np .linksForm { margin: 0 0 13px; }
+.np .profileExtras .research h3 { margin-top: 0; }
+.np .listSharing { margin: 8px 0; font-size: 0.875rem; }
+.np .listSharing summary { color: #304e86; min-height: 32px; padding: 7px 0; }
+.np .listSharing .audienceSelect, .np .sessionControls .audienceSelect { margin: 4px 0; }
+.np .sessionControls > .audienceInline { min-width: 0; }
+.np .simpleSignup .audienceMembers input { width: 18px; }
+.np .joinWrap .simpleSignup > h2 { font-size: 1.35rem; }
+.np .audienceOptions label:has(input:disabled) { cursor: default; }
+.np .simpleProfile .recordHead, .np .profileExtras { min-width: 0; }
+@media (max-width: 680px) {
+  .np .profileExtras { padding-inline: 14px; }
+  .np .disclosureLabel small { display: block; margin: 3px 0 0; }
+  .np .audienceOptions { display: grid; grid-template-columns: minmax(0, 1fr); gap: 5px; }
+  .np .audienceOptions label, .np .simpleSignup .audienceOptions label { justify-content: flex-start; }
+  .np .audienceMembers .personChoices label, .np .simpleSignup .personChoices label { min-height: 44px; }
+  .np .audienceSelect select, .np .simpleSignup .nameField input, .np .linksForm input { font-size: 1rem; }
+  .np .listSharing summary { min-height: 44px; }
+  .np .profileMain .textBtn { white-space: normal; }
+  .np .canvas > .simpleProfile { margin: 14px; }
+  .np .roomEditor .formRow { flex-wrap: wrap; }
+  .np .simpleSignup .primary { width: 100%; }
+}
+@media (forced-colors: active) {
+  .np .audienceOptions label.chosen { border-color: Highlight; }
+}
+.np .roomMethods, .np .captureTop, .np .captureActions { display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap; }
+.np .roomMethods { margin: 0.2rem 0 0.8rem; }
+.np .roomMethods .outlined { min-height: 44px; }
+.np .roomMethods button[aria-expanded="true"] { color: #24499a; border-color: #5474c0; background: #edf2ff; }
+.np .roomCapture { background: #f6f8fc; border: 1px solid var(--line); border-radius: 8px; padding: 12px; margin: 10px 0; min-width: 0; }
+.np .captureTop { justify-content: space-between; }
+.np .captureTop h3 { font-size: 1rem; }
+.np .roomCapture p { font-size: 0.875rem; line-height: 1.45; margin: 6px 0; }
+.np .roomCapture video { width: 100%; max-height: 290px; object-fit: contain; background: #202536; border-radius: 6px; }
+.np .roomCapture video[hidden] { display: none; }
+.np .captureActions { font-size: 0.875rem; }
+.np .captureActions label { position: relative; display: inline-flex; align-items: center; min-height: 44px; color: #24499a; font-weight: 600; cursor: pointer; text-decoration: underline; }
+.np .captureActions label input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+.np .captureActions label:focus-within { outline: 3px solid #24499a; outline-offset: 2px; }
+.np .captureActions a { color: #24499a; padding: 0.65rem 0; }
+.np .captureStatus { font-weight: 550; }
+.np .captureResult { font-size: 0.875rem; color: #264785; }
+.np .roomEditor .audienceSelect select { width: auto; max-width: 100%; }
+.np .conferencePicker { display: grid; gap: .35rem; margin: .9rem 0 1.1rem; max-width: 26rem; font-weight: 600; }
+.np .conferencePicker select { width: 100%; min-width: 0; min-height: 44px; padding: .55rem .75rem; color: var(--text); background-color: white; border: 1px solid #75809a; border-radius: .45rem; font: inherit; }
+.np .canvas > .reminderPanel { max-width: 820px; margin: 20px 30px 0; padding: 18px 22px; }
+.np .reminderHeading, .np .reminderKicker, .np .reminderAlertActions, .np .reminderAlertActions button { display: flex; align-items: center; gap: .5rem; }
+.np .reminderHeading { color: var(--blue); }
+.np .reminderHeading h2 { margin: 0; color: var(--text); font-size: 1.15rem; }
+.np .reminderPanel p { margin: .55rem 0 .85rem; }
+.np .reminderActions { display: flex; align-items: flex-end; flex-wrap: wrap; gap: .5rem 1rem; }
+.np .reminderActions label { display: grid; gap: .25rem; font-weight: 600; min-width: 0; max-width: 100%; }
+.np .reminderActions select { width: 100%; min-width: 0; min-height: 44px; max-width: 100%; padding: .35rem .6rem; border: 1px solid #75809a; border-radius: .4rem; color: var(--text); background: white; font: inherit; }
+.np .reminderActions button, .np .reminderPanel > button { min-height: 44px; }
+.np .reminderPanel .reminderHint { margin-bottom: 0; color: var(--muted); font-size: .88rem; }
+.np .reminderSchedule { list-style: none; margin: 1rem 0 0; padding: 0; }
+.np .reminderSchedule li { display: grid; gap: .2rem; padding: .65rem 0; border-top: 1px solid var(--line); }
+.np .reminderSchedule a { font-weight: 600; color: var(--blue); overflow-wrap: anywhere; }
+.np .reminderSchedule small { color: var(--muted); }
+.np .sessionReminderAlert { position: fixed; z-index: 8; right: 20px; bottom: max(20px, env(safe-area-inset-bottom)); width: min(24rem, calc(100% - 40px)); max-height: 65dvh; overflow: auto; background: white; border: 1px solid #7883a2; border-left: 4px solid var(--blue); box-shadow: 0 5px 22px #20294335; color: var(--text); border-radius: .55rem; padding: .85rem 1rem; overflow-wrap: anywhere; }
+.np .reminderAlertBody { display: grid; gap: .35rem; }
+.np .reminderKicker { color: var(--blue); font-weight: 600; font-size: .86rem; }
+.np .reminderAlertBody small { color: var(--muted); }
+.np .reminderAlertActions { margin-top: .5rem; flex-wrap: wrap; justify-content: space-between; }
+.np .reminderAlertActions a, .np .reminderAlertActions button { min-height: 44px; display: inline-flex; align-items: center; color: var(--blue); font: inherit; font-weight: 600; }
+.np .reminderAlertActions button { border: 0; background: transparent; padding: .25rem .4rem; }
+@media (max-width: 700px) {
+  .np .canvas > .reminderPanel { margin: 12px 14px 0; padding: 14px; }
+  .np .sessionReminderAlert { right: 10px; bottom: max(10px, env(safe-area-inset-bottom)); width: min(24rem, calc(100% - 20px)); }
+}
+.np .roomVolunteers .textBtn { margin-left: auto; }
+.np .roomReportChoices .outlined { min-height: 44px; justify-content: center; }
+.np .roomReportChoices .outlined[aria-pressed=true] { background: #eef1fb; border-color: var(--blue); color: var(--blue); }
+.np .roomCountChoice { margin: .8rem 0; }
+@media(max-width: 760px) {
+  .np .roomVolunteers .textBtn { margin-left: 0; }
+}
+
+/* Ajouts du prototype (pas dans la démo) */
+.np .demoSession { padding: 14px 0; border-top: 1px solid var(--line); }
+.np .demoSession > a { color: var(--text); text-decoration: none; }
+.np .demoSession .grow { flex: 1; }
+
+/* ---------- Harmonisation avec le reste du prototype (tokens et composants relevés sur le PWA) ----------
+   Les règles ci-dessus viennent de la démo ; celles-ci les écrasent pour que My profile, My Lists et
+   Messages aient la même apparence que les autres pages (couleurs, typo, cartes, pilules). */
+.np {
+  --text: #2c2d31; --muted: #737e8a; --line: #e6e8f0; --blue: #497cff; --pale: #f7f9fc; --canvas: #f5f6fa;
+  font-family: Montserrat, system-ui, sans-serif; font-size: 14px; line-height: 1.4; background: transparent; color: var(--text);
+}
+.np h2, .np h3, .np h4 { font-weight: 500; letter-spacing: 0; }
+.np h2 { font-size: 16px; }
+.np h3 { font-size: 14px; }
+.np p { font-size: 13px; line-height: 1.5; }
+.np small { font-size: 12px; }
+.np a, .np .textBtn { color: var(--primary); }
+.np .textBtn { font-size: 13px; font-weight: 500; }
+.np button:focus-visible, .np a:focus-visible, .np input:focus-visible, .np select:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+/* Pleine largeur, comme les autres pages (la démo limitait à 720–820 px). */
+.np .reading, .np .simpleProfile, .np .simpleSignup, .np .canvas > .reminderPanel { max-width: none; }
+.np .reading { margin-top: 12px; gap: 12px; }
+.np .panel { border-radius: 10px; border: 1px solid var(--line); box-shadow: none; background: var(--surface); }
+.np .profileMain, .np .simpleSignup, .np .joinCard, .np .record { padding: 16px 18px; }
+.np .profileIdentity { margin-bottom: 16px; padding-bottom: 16px; }
+.np .profileIdentity h2 { font-size: 20px; }
+.np .profileIdentity p { font-size: 12px; }
+
+/* Boutons : pilules du PWA */
+.np .primary, .np .outlined {
+  min-height: 32px; padding: 6px 16px; border-radius: 16px; font-size: 13px; font-weight: 500;
+}
+.np .primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+.np .primary:hover { background: #3a6af0; }
+.np .outlined { background: var(--surface); border: 1px solid var(--line); color: var(--primary); }
+.np .outlined:hover, .np .iconBtn:hover { background: var(--primary-soft); }
+.np .roomMethods .outlined { min-height: 32px; }
+.np .roomMethods button[aria-expanded="true"] { color: var(--primary); border-color: var(--primary); background: var(--primary-soft); }
+
+/* Champs */
+.np select, .np .chat input, .np .audienceSelect select, .np .linksForm input, .np .simpleSignup .nameField input,
+.np .conferencePicker select, .np .joinCard .formRow input {
+  min-height: 40px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface);
+  color: var(--text); font: inherit; font-size: 14px; font-weight: 400;
+}
+.np select:focus, .np input:focus { border-color: var(--primary); outline: none; }
+.np .conferencePicker, .np .audienceSelect, .np .reading .linksForm > label, .np .simpleSignup .nameField { font-weight: 500; font-size: 13px; }
+
+/* Choix d'audience : pilules Session / Content du PWA */
+.np .audienceChoice legend { font-size: 14px; font-weight: 500; }
+.np .audienceOptions { gap: 6px; }
+.np .audienceOptions label, .np .simpleSignup .audienceOptions label {
+  min-height: 32px; padding: 6px 14px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface);
+  color: var(--text); font-size: 14px; font-weight: 400;
+}
+.np .audienceOptions label:hover { background: var(--chip); }
+.np .audienceOptions label.chosen { background: var(--primary); border: 1px solid var(--primary); color: #fff; padding: 6px 14px; font-weight: 400; }
+.np .audienceOptions label input[type="radio"] { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.np .audienceOptions label:has(input:focus-visible) { outline: 2px solid var(--primary); outline-offset: 2px; }
+.np .audienceMembers legend { font-weight: 500; font-size: 13px; }
+.np .check input, .np .personChoices input { accent-color: var(--primary); }
+
+/* Sections dépliables */
+.np .profileDisclosure summary { font-weight: 500; font-size: 14px; min-height: 48px; padding: 12px 2px; }
+.np .disclosureIcon { color: var(--primary); }
+.np .disclosureLabel small { font-size: 12px; }
+
+/* Puces, statuts, alertes, toast */
+.np .chips span { background: var(--chip); color: var(--text); border-radius: 8px; padding: 2px 8px; font-size: 12px; }
+.np .checkStatus { background: var(--primary-soft); color: var(--text); border-radius: 8px; }
+.np .captureResult { color: var(--primary); }
+.np .alert { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; color: var(--error); padding: 10px 14px; margin: 12px 0 0; }
+.np .toast { background: var(--nav); border-radius: 8px; font-size: 13px; }
+.np .roomCapture { background: var(--chip); border-radius: 10px; }
+.np .captureActions label, .np .captureActions a { color: var(--primary); }
+
+/* Panneau d'aperçu */
+.np .drawer { border-left: 1px solid var(--line); box-shadow: -8px 0 30px rgba(20, 24, 40, 0.15); }
+.np .drawerTop { font-size: 13px; }
+.np .details > h2 { font-size: 20px; }
+.np .details section h3 { font-size: 14px; }
+
+/* My Lists */
+.np .record h3 { font-size: 14px; }
+.np .tile { background: var(--primary-soft); color: var(--primary); border-radius: 8px; }
+.np .listSharing summary { color: var(--primary); font-size: 13px; }
+.np .lines li { font-size: 13px; border-top-color: var(--line); }
+.np .eyebrow { font-size: 12px; color: var(--muted); }
+.np .demoSession > a b { font-weight: 500; }
+.np .reminderPanel { padding: 16px 18px; }
+.np .reminderHeading { color: var(--text); }
+.np .reminderHeading svg { color: var(--primary); }
+.np .reminderSchedule a { color: var(--text); }
+
+/* Messages */
+.np .chatLayout { margin-top: 12px; }
+.np .contacts, .np .chat { padding: 14px 16px; }
+.np .contacts button { border-radius: 8px; }
+.np .contacts button.selected, .np .contacts button:hover { background: var(--primary-soft); }
+.np .bubble { background: var(--chip); border: 1px solid var(--line); border-radius: 10px; font-size: 13px; }
+.np .bubble.mine { background: var(--primary-soft); border-color: transparent; }
+.np .inlineNotice { border-radius: 10px; font-size: 13px; }
+
+/* Graisses et tailles restantes de la démo → échelle du prototype (400 / 500, 12–16 px) */
+.np .avatar { font-weight: 500; font-size: 14px; }
+.np .avatar.large { font-size: 18px; }
+.np .reminderHeading h2, .np .joinWrap .simpleSignup > h2, .np .joinCard h2 { font-size: 16px; font-weight: 500; }
+.np .audienceMembers legend, .np .audienceSelect, .np .reading .linksForm > label, .np .simpleSignup .nameField,
+.np .conferencePicker, .np .joinCard label, .np .reminderActions label, .np .captureStatus, .np .captureActions label,
+.np .links a, .np .research li small, .np .reminderKicker, .np .reminderAlertActions a, .np .reminderAlertActions button {
+  font-weight: 500;
+}
+.np .reminderActions select { font-weight: 400; }
+.np .reminderSchedule a, .np .research a, .np .lines strong a { font-weight: 500; color: var(--text); text-decoration: none; }
+.np .reminderSchedule a:hover, .np .research a:hover { color: var(--primary); text-decoration: underline; }
+.np .research h4 { font-size: 13px; font-weight: 500; }
+
+/* Mobile : la démo empile les choix d'audience et grossit les boutons à 44 px ; le prototype garde ses pilules en ligne. */
+@media (max-width: 680px) {
+  .np .audienceOptions { display: flex; flex-wrap: wrap; }
+  .np .audienceOptions label, .np .simpleSignup .audienceOptions label { min-height: 32px; }
+  .np .outlined, .np .primary, .np .textBtn { min-height: 32px; }
+  .np .canvas > .simpleProfile, .np .reading { margin: 12px 0 0; }
+}
+
+/* Page Current Room (bloc sorti de My profile) */
+.np .roomHeading { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.np .roomHeading svg { color: var(--primary); }
+.np .roomHeading small { margin-left: 4px; }
+
+/* Notifications / Settings en haut de My profile */
+.np .account-panels { margin-bottom: 0; }
+.np .setting-empty { display: flex; flex-direction: column; gap: 6px; }
+.np .setting-empty strong { font-weight: 500; }
+.np .setting-empty a, .np .settings-note a { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; }
+.np .settings { display: flex; flex-direction: column; gap: 18px; }
+.np .settings section { display: flex; flex-direction: column; gap: 8px; padding-top: 14px; border-top: 1px solid var(--line); }
+.np .settings section:first-child { border-top: 0; padding-top: 0; }
+.np .settings h3 { font-size: 14px; }
+.np .settings h4 { font-size: 13px; font-weight: 500; margin-top: 4px; }
+.np .settings .primary { align-self: flex-start; }
+.np .avatar-palette { display: flex; flex-wrap: wrap; gap: 8px; }
+.np .avatar-palette button { width: 32px; height: 32px; border-radius: 50%; font-size: 11px; font-weight: 500; border: 2px solid transparent; }
+.np .avatar-palette button.chosen { box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--primary); }
+.np .setting-row { display: flex; flex-wrap: wrap; gap: 16px; }
+.np .setting-row label, .np .setting-select { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+.np .setting-toggle { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--muted); }
+.np .setting-toggle input { margin-top: 2px; accent-color: var(--primary); }
+.np .setting-toggle small { display: block; font-size: 12px; }
+.np .settings select:disabled, .np .setting-toggle input:disabled { opacity: 0.6; }
+.np .settings-note { font-size: 12px; }
+
+/* Actions de page (ex. « Preview as another attendee ») : en haut à droite, hors des blocs */
+.np .page-actions { display: flex; justify-content: flex-end; }
+
+/* My profile présenté comme le voient les autres, avec un crayon par section */
+.np .profileSettingsRow { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 32px; }
+.np .profileSettingsRow .conferencePicker { margin: 0; flex: 0 1 300px; }
+.np .profileSettingsRow .audiencePrimary { flex: 1 1 auto; }
+.np .profileSettingsRow .audienceChoice legend { font-size: 13px; margin-bottom: 6px; }
+.np .profileSection { padding-top: 14px; margin-top: 14px; border-top: 1px solid var(--line); }
+.np .profileSection .research h3 { margin-bottom: 4px; }
+.np .profileSectionHead { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.np .editBtn { margin-left: auto; color: var(--primary); min-height: 28px; min-width: 28px; }
+.np .audienceTag { padding: 1px 8px; border-radius: 8px; background: var(--chip); border: 1px solid var(--line); color: var(--muted); font-size: 11px; white-space: nowrap; }
+.np .ownList + .ownList { margin-top: 10px; }
+.np .ownListHead { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+.np .ownListHead b { font-weight: 500; }
+.np .profileCard .lines { margin-top: 4px; }
+.np .profileCard .lines li { align-items: center; padding: 6px 0; }
+.np .profileCard .grow { flex: 1; }
+.np .profileCard .checkStatus { margin: 0; }
+.np .inlineEditor { display: flex; flex-direction: column; gap: 8px; max-width: 640px; }
+.np .inlineEditor > label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 500; }
+.np .inlineEditor input { width: 100%; }
+
+/* Tuile « Publications at CHI '26 » : mise en valeur (couleur des prix, comme la page Awards) */
+.np .pubTile { margin-top: 14px; padding: 14px 16px; border-radius: 10px; background: #fff8e6; border: 1px solid #f3d892; }
+.np .pubTileHead { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; color: #8a5a00; }
+.np .pubTileHead h3 { color: #6b4500; }
+.np .pubTileHead h3 span { font-weight: 400; color: #8a5a00; }
+.np .pubTileList { display: flex; flex-direction: column; gap: 10px; }
+.np .pubTile .content-card { border-color: #f1e2b8; }
+.np .details .pubTile { margin: 14px 0; }
+/* Les cartes du programme gardent leurs couleurs dans les pages networking */
+.np .card-people a { color: var(--muted); }
+.np .card-people a:hover { color: var(--primary); }
+.np .content-card p.abstract { font-size: 13px; color: var(--text); }
+
+/* Slides et lien vers le code dans la tuile des publications */
+.np .pubItem { display: flex; flex-direction: column; gap: 8px; }
+.np .pubMaterials { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 0 2px; }
+.np .pubMaterial { display: inline-flex; align-items: center; gap: 2px; }
+.np .pubMaterial a, .np .pubMaterial .textBtn { display: inline-flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 500; color: #6b4500; }
+.np .pubMaterial .iconBtn { min-height: 24px; min-width: 24px; padding: 2px; color: var(--muted); }
+.np .pubActions { display: inline-flex; flex-wrap: wrap; gap: 8px; margin-left: auto; }
+.np .pubActions .outlined { background: var(--surface); border-color: #f1e2b8; color: #6b4500; }
+.np .pubActions .outlined:hover { background: #fff1cc; }
+.np .pubCodeForm { display: flex; flex-wrap: wrap; gap: 8px; flex: 1 1 100%; }
+.np .pubCodeForm input { flex: 1 1 260px; min-width: 0; }
+.np .pubError { flex-basis: 100%; color: var(--error); }
+
+/* Bouton « Direct message » à droite du nom (mode aperçu) */
+.np .profileNameRow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.np .dmBtn { min-height: 30px; padding: 4px 14px; }
+
+/* Calendrier « Session plans » */
+.np .planCal { display: flex; flex-direction: column; gap: 6px; }
+.np .planCalScroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.np .planCalGrid { display: grid; min-width: 680px; }
+.np .planCalCorner, .np .planCalDay { position: sticky; top: 0; z-index: 1; background: var(--chip); border-bottom: 1px solid var(--line); }
+.np .planCalDay { padding: 6px 8px; font-size: 12px; font-weight: 500; text-align: center; border-left: 1px solid var(--line); }
+.np .planCalHours { position: relative; }
+.np .planCalHours span { position: absolute; right: 6px; transform: translateY(-50%); font-size: 10px; color: var(--muted); }
+.np .planCalHours span:first-child { transform: none; }
+.np .planCalCol {
+  position: relative; border-left: 1px solid var(--line);
+  background-image: repeating-linear-gradient(to bottom, var(--line) 0 1px, transparent 1px 44px);
+}
+.np .planEvent {
+  position: absolute; overflow: hidden; display: flex; flex-direction: column; gap: 1px; padding: 3px 6px;
+  background: #eef3ff; border: 1px solid #d5e0ff; border-radius: 6px;
+  font-size: 11px; line-height: 1.25; color: var(--text);
+}
+.np .planEventTime { display: inline-flex; align-items: center; gap: 3px; color: var(--muted); font-size: 10px; }
+.np .planEventName { font-weight: 500; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+.np .planEventRoom { color: var(--muted); font-size: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.np .planEvent.hiddenEvent { background: #f1f2f5; border-color: #dfe1e6; color: #9aa1ad; }
+.np .planEvent.hiddenEvent .planEventTime, .np .planEvent.hiddenEvent .planEventRoom { color: #a7adb8; }
+.np .planEventTools { position: absolute; top: 2px; right: 2px; display: flex; align-items: center; gap: 3px; padding: 1px 2px; border-radius: 6px; background: rgba(255, 255, 255, 0.92); }
+.np .planTool { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 4px; color: var(--primary); }
+.np .planTool:hover { background: var(--primary-soft); }
+.np .planSwitch { position: relative; display: inline-block; width: 26px; height: 15px; cursor: pointer; }
+.np .planSwitch input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.np .planSwitch span { position: absolute; inset: 0; border-radius: 8px; background: #c8ccd6; transition: background 0.15s; pointer-events: none; }
+.np .planSwitch span::after { content: ""; position: absolute; top: 2px; left: 2px; width: 11px; height: 11px; border-radius: 50%; background: #fff; transition: transform 0.15s; }
+.np .planSwitch input:checked + span { background: var(--primary); }
+.np .planSwitch input:checked + span::after { transform: translateX(11px); }
+.np .planSwitch input:focus-visible + span { outline: 2px solid var(--primary); outline-offset: 2px; }
+.np .planCalHint { font-size: 12px; }
+
+/* Recherche pour remplacer une session */
+.np .planSearch { border: 0; border-radius: 12px; padding: 16px 18px; width: min(620px, 94vw); max-height: 80vh; box-shadow: 0 12px 40px rgba(20, 24, 40, 0.25); display: flex; flex-direction: column; gap: 8px; }
+.np .planSearch:not([open]) { display: none; }
+.np .planSearch::backdrop { background: rgba(20, 23, 45, 0.4); }
+.np .planSearchTop { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 14px; }
+.np .planSearchTop strong { font-weight: 500; }
+.np .planSearchField { margin: 0; }
+.np .planSearchHint { color: var(--muted); }
+.np .planSearchResults { list-style: none; margin: 0; padding: 0; overflow-y: auto; min-height: 0; flex: 1; }
+.np .planSearchResults li + li { border-top: 1px solid var(--line); }
+.np .planSearchResults button { display: flex; align-items: flex-start; gap: 10px; width: 100%; padding: 8px 6px; text-align: left; border-radius: 6px; }
+.np .planSearchResults button:hover { background: var(--chip); }
+.np .planSearchResults .type-dot { margin-top: 6px; flex: none; }
+.np .planSearchMain { display: flex; flex-direction: column; gap: 2px; font-size: 13px; }
+.np .planSearchMain b { font-weight: 500; }
+.np .planSearchEmpty { padding: 12px 6px; font-size: 13px; }
+.np .planEvent.withTools .planEventTime { padding-right: 54px; white-space: nowrap; overflow: hidden; }
+
+/* Aperçu des présentations au survol d'un event, conflits en rouge */
+.np .planEvent:focus-visible { outline: 2px solid var(--primary); outline-offset: 1px; }
+.np .planWarn { color: var(--error); flex: none; }
+.np .planPreview {
+  position: fixed; z-index: 30; max-height: 370px; overflow-y: auto; padding: 12px 14px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 10px 30px rgba(20, 24, 40, 0.18);
+  display: flex; flex-direction: column; gap: 4px; font-size: 12px; overscroll-behavior: contain;
+}
+.np .planPreviewHead { display: flex; align-items: flex-start; gap: 6px; font-size: 13px; }
+.np .planPreviewHead strong { font-weight: 500; }
+.np .planPreviewConflict { color: var(--error); font-weight: 500; }
+.np .planPreview ul { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-direction: column; }
+.np .planPreview li { display: flex; gap: 8px; padding: 5px 0; border-top: 1px solid var(--line); line-height: 1.35; }
+.np .planPreviewTime { flex: none; width: 104px; color: var(--muted); font-size: 11px; }
+.np .planPreview li.conflict, .np .planPreview li.conflict .planPreviewTime { color: var(--error); }
+.np .planPreview li em { display: block; font-style: normal; font-size: 11px; opacity: 0.85; }
+.np .planPreviewHead strong { flex: 1; }
+.np .planPreviewClose { margin: -4px -6px 0 0; min-height: 26px; min-width: 26px; color: var(--muted); }

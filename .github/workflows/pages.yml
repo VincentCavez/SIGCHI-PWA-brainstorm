@@ -1,0 +1,54 @@
+# Build Vite + déploiement GitHub Pages à chaque push sur main (aucune branche gh-pages).
+# Prérequis : Settings > Pages > Source = « GitHub Actions », et les secrets de dépôt
+# SIGCHI_PROGRAM_LIST_URL et SIGCHI_PROGRAM_URL (Settings > Secrets and variables > Actions).
+# Volontairement absents : clientId, URLs de connexion, token. Le site publié n'a pas de login.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+        env:
+          SIGCHI_PROGRAM_LIST_URL: ${{ secrets.SIGCHI_PROGRAM_LIST_URL }}
+          SIGCHI_PROGRAM_URL: ${{ secrets.SIGCHI_PROGRAM_URL }}
+          PAGES_BASE: /${{ github.event.repository.name }}/
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

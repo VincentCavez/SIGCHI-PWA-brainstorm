@@ -1,0 +1,481 @@
+{
+  "papers": [
+    {
+      "id": "222959",
+      "title": "VisGuardian: A Lightweight Group-based Visual Privacy Control Technique For Smart Glasses in Home Environments",
+      "authors": [
+        "220195",
+        "221679",
+        "218023",
+        "216851",
+        "219859",
+        "218442",
+        "218974",
+        "218279",
+        "221522",
+        "218493"
+      ],
+      "authorNames": [
+        "Shuning Zhang",
+        "Qucheng Zang",
+        "Yongquan 'Owen' Hu",
+        "Jiachen Du",
+        "Xueyang Wang",
+        "Yan Kong",
+        "Xinyi Fu",
+        "Suranga Nanayakkara",
+        "Xin Yi",
+        "Hewu Li"
+      ],
+      "track": "Papers",
+      "doi": "https://doi.org/10.1145/3772318.3790288",
+      "url": "https://programs.sigchi.org/chi/2026/program/content/222959"
+    },
+    {
+      "id": "222912",
+      "title": "The Words That Can't Be Shared: Exploring the Design of Unsent Messages",
+      "authors": [
+        "214280",
+        "214170"
+      ],
+      "authorNames": [
+        "Michael Yin",
+        "Robert Xiao"
+      ],
+      "track": "Papers",
+      "doi": "https://doi.org/10.1145/3772318.3790639",
+      "url": "https://programs.sigchi.org/chi/2026/program/content/222912"
+    },
+    {
+      "id": "221960",
+      "title": "Scrollytelling as an Alternative Format for Privacy Policies",
+      "authors": [
+        "218070",
+        "220138"
+      ],
+      "authorNames": [
+        "Gonzalo Gabriel Méndez",
+        "Jose Such"
+      ],
+      "track": "Papers",
+      "doi": "https://doi.org/10.1145/3772318.3790704",
+      "url": "https://programs.sigchi.org/chi/2026/program/content/221960"
+    },
+    {
+      "id": "214803",
+      "title": "Craft-Based Data Physicalization: Opportunities and Challenges",
+      "authors": [
+        "214768",
+        "214143",
+        "214722",
+        "214665",
+        "214554",
+        "214047",
+        "214480",
+        "214049",
+        "214492"
+      ],
+      "authorNames": [
+        "Bahare Bakhtiari",
+        "Foroozan Daneshzand",
+        "Kim Sauvé",
+        "Nathalie Bressa",
+        "Samuel Huron",
+        "Lora Oehlberg",
+        "Sheelagh Carpendale",
+        "Sowmya Somanath",
+        "Charles Perin"
+      ],
+      "track": "Workshops",
+      "doi": "https://doi.org/10.1145/3772363.3778766",
+      "url": "https://programs.sigchi.org/chi/2026/program/content/214803"
+    },
+    {
+      "id": "230155",
+      "title": "Opportunities to Support Musicians' Score-based Practice with Context-Specific Annotations on Tablet",
+      "authors": [
+        "229064",
+        "228755"
+      ],
+      "authorNames": [
+        "Xintian Fu",
+        "Vincent Cavez"
+      ],
+      "track": "Posters",
+      "doi": "https://doi.org/10.1145/3772363.3798332",
+      "url": "https://programs.sigchi.org/chi/2026/program/content/230155"
+    },
+    {
+      "id": "222461",
+      "title": "Perspectra: Choosing Your Experts Enhances Critical Thinking in Multi-Agent Research Ideation",
+      "authors": [
+        "216369",
+        "218844",
+        "218615",
+        "217925",
+        "214604",
+        "217367"
+      ],
+      "authorNames": [
+        "Yiren Liu",
+        "Viraj Nischal Shah",
+        "Sangho Suh",
+        "Pao Siangliulue",
+        "Tal August",
+        "Yun Huang"
+      ],
+      "track": "Papers",
+      "doi": "https://doi.org/10.1145/3772318.3791560",
+      "url": "https://programs.sigchi.org/chi/2026/program/content/222461"
+    },
+    {
+      "id": "222312",
+      "title": "From Squishing to Meaning: Exploring Data Physicalization Through  Children’s Embodied Experiences",
+      "authors": [
+        "218302",
+        "219605",
+        "216996",
+        "214414",
+        "219610",
+        "220316",
+        "218098"
+      ],
+      "authorNames": [
+        "Andres Alberto Ramirez Duque",
+        "Dushani Perera",
+        "Dorsey B. Kaufmann",
+        "Ayça Atabey",
+        "Uta Hinrichs",
+        "Andrew Manches",
+        "Stephen Anthony Brewster"
+      ],
+      "track": "Papers",
+      "doi": "https://doi.org/10.1145/3772318.3791846",
+      "url": "https://programs.sigchi.org/chi/2026/program/content/222312"
+    },
+    {
+      "id": "222678",
+      "title": "AnnotateGPT: Designing Human–AI Collaboration in Pen-Based Document Annotation",
+      "authors": [
+        "220159",
+        "217027",
+        "217560"
+      ],
+      "authorNames": [
+        "Benedict Leung",
+        "Mariana Shimabukuro",
+        "Christopher Collins"
+      ],
+      "track": "Papers",
+      "doi": "https://doi.org/10.1145/3772318.3790867",
+      "url": "https://programs.sigchi.org/chi/2026/program/content/222678"
+    },
+    {
+      "id": "221897",
+      "title": "Empowered XR through Generative AI: Balancing Superpowers and Risks",
+      "authors": [
+        "215559",
+        "219034",
+        "219351",
+        "217171",
+        "220075",
+        "217367"
+      ],
+      "authorNames": [
+        "Yiliu Tang",
+        "Mengke Wu",
+        "Jason Situ",
+        "Jingyi Liu",
+        "Andrea Yaoyun Cui",
+        "Yun Huang"
+      ],
+      "track": "Papers",
+      "doi": "https://doi.org/10.1145/3772318.3791307",
+      "url": "https://programs.sigchi.org/chi/2026/program/content/221897"
+    },
+    {
+      "id": "222240",
+      "title": "Redesigning Educational Videos for Deaf and Hard-of-Hearing Learners",
+      "authors": [
+        "214454",
+        "216856",
+        "221473",
+        "219562",
+        "215820",
+        "217464",
+        "217367"
+      ],
+      "authorNames": [
+        "Si Chen",
+        "Haocong Cheng",
+        "Suzy Su",
+        "Lu Ming",
+        "Sarah Masud",
+        "Qi Wang",
+        "Yun Huang"
+      ],
+      "track": "Papers",
+      "doi": "https://doi.org/10.1145/3772318.3791470",
+      "url": "https://programs.sigchi.org/chi/2026/program/content/222240"
+    },
+    {
+      "id": "222546",
+      "title": "Envisioning an Ethical and Sustainable Metaverse Workplace: Beyond AI-Driven Surveillance",
+      "authors": [
+        "215692",
+        "220877",
+        "216191",
+        "217367"
+      ],
+      "authorNames": [
+        "Hyanghee Park",
+        "Daehwan Ahn",
+        "Jae Eun Kim",
+        "Yun Huang"
+      ],
+      "track": "Papers",
+      "doi": "https://doi.org/10.1145/3772318.3791525",
+      "url": "https://programs.sigchi.org/chi/2026/program/content/222546"
+    },
+    {
+      "id": "222996",
+      "title": "AReframedChair: Reframing the Empty Chair through Dyadic and Triadic AR-Mediated Self-Embodiment",
+      "authors": [
+        "217456",
+        "216544",
+        "215537",
+        "217367",
+        "216697"
+      ],
+      "authorNames": [
+        "Yongming Li",
+        "Ling Ling",
+        "Yunpeng Song",
+        "Yun Huang",
+        "Zhongmin Cai"
+      ],
+      "track": "Papers",
+      "doi": "https://doi.org/10.1145/3772318.3790406",
+      "url": "https://programs.sigchi.org/chi/2026/program/content/222996"
+    },
+    {
+      "id": "229861",
+      "title": "Mosaic: A Multi-Level Framework for Observing and Evaluating Performance of Multi-Agent Systems",
+      "authors": [
+        "216369",
+        "217367",
+        "219074"
+      ],
+      "authorNames": [
+        "Yiren Liu",
+        "Yun Huang",
+        "Shunan Guo"
+      ],
+      "track": "Posters",
+      "doi": "https://doi.org/10.1145/3772363.3798830",
+      "url": "https://programs.sigchi.org/chi/2026/program/content/229861"
+    },
+    {
+      "id": "230142",
+      "title": "Read the Room: Exploring When LLM Agents Should Participate in Everyday Mixed-Context Group Chats on Mobile Messaging Platforms",
+      "authors": [
+        "229041"
+      ],
+      "authorNames": [
+        "Sunkyeung YOO"
+      ],
+      "track": "Posters",
+      "doi": "https://doi.org/10.1145/3772363.3798392",
+      "url": "https://programs.sigchi.org/chi/2026/program/content/230142"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "225155",
+      "name": "AI Governance and Accountability",
+      "room": "Area 1 + 2 + 3: theatre",
+      "time": "Mon, 13 Apr · 13:15–14:45 CEST",
+      "papers": [
+        "222959"
+      ],
+      "url": "https://programs.sigchi.org/chi/2026/program/session/225155",
+      "startsAt": 1776078900000
+    },
+    {
+      "id": "225713",
+      "name": "Video Presentations (Papers)",
+      "room": "Area 1 + 2 + 3: videos",
+      "time": "Mon, 13 Apr · 13:15–13:15 CEST",
+      "papers": [
+        "221897"
+      ],
+      "url": "https://programs.sigchi.org/chi/2026/program/session/225713",
+      "startsAt": 1776078900000
+    },
+    {
+      "id": "251863",
+      "name": "Video Presentations (Posters)",
+      "room": "Area 1 + 2 + 3: videos",
+      "time": "Mon, 13 Apr · 16:15–16:15 CEST",
+      "papers": [
+        "230142"
+      ],
+      "url": "https://programs.sigchi.org/chi/2026/program/session/251863",
+      "startsAt": 1776089700000
+    },
+    {
+      "id": "251931",
+      "name": "Posters (Monday)",
+      "room": "Area 1 + 2 + 3: posters",
+      "time": "Mon, 13 Apr · 16:15–17:45 CEST",
+      "papers": [
+        "230155"
+      ],
+      "url": "https://programs.sigchi.org/chi/2026/program/session/251931",
+      "startsAt": 1776089700000
+    },
+    {
+      "id": "252068",
+      "name": "Posters (Monday)",
+      "room": "Area 1 + 2 + 3: posters",
+      "time": "Mon, 13 Apr · 20:00–21:30 CEST",
+      "papers": [
+        "230155"
+      ],
+      "url": "https://programs.sigchi.org/chi/2026/program/session/252068",
+      "startsAt": 1776103200000
+    },
+    {
+      "id": "225050",
+      "name": "The Workplace",
+      "room": "P1 - Room 120",
+      "time": "Tue, 14 Apr · 11:00–12:30 CEST",
+      "papers": [
+        "222546"
+      ],
+      "url": "https://programs.sigchi.org/chi/2026/program/session/225050",
+      "startsAt": 1776157200000
+    },
+    {
+      "id": "225103",
+      "name": "Privacy Policies",
+      "room": "P1 - Room 133",
+      "time": "Tue, 14 Apr · 11:00–12:30 CEST",
+      "papers": [
+        "221960"
+      ],
+      "url": "https://programs.sigchi.org/chi/2026/program/session/225103",
+      "startsAt": 1776157200000
+    },
+    {
+      "id": "224984",
+      "name": "Human-AI Interaction & GenAI",
+      "room": "P1 - Room 116",
+      "time": "Wed, 15 Apr · 13:15–14:45 CEST",
+      "papers": [
+        "222678"
+      ],
+      "url": "https://programs.sigchi.org/chi/2026/program/session/224984",
+      "startsAt": 1776251700000
+    },
+    {
+      "id": "225026",
+      "name": "VR and Immersive Technologies for Mental Health",
+      "room": "P1 - Room 132",
+      "time": "Wed, 15 Apr · 13:15–14:45 CEST",
+      "papers": [
+        "222996"
+      ],
+      "url": "https://programs.sigchi.org/chi/2026/program/session/225026",
+      "startsAt": 1776251700000
+    },
+    {
+      "id": "214974",
+      "name": "Craft-Based Data Physicalization: Opportunities and Challenges",
+      "room": "P1 - Room 115",
+      "time": "Wed, 15 Apr · 16:15–17:45 CEST",
+      "papers": [
+        "214803"
+      ],
+      "url": "https://programs.sigchi.org/chi/2026/program/session/214974",
+      "startsAt": 1776262500000
+    },
+    {
+      "id": "251934",
+      "name": "Posters (Wednesday)",
+      "room": "Area 1 + 2 + 3: posters",
+      "time": "Wed, 15 Apr · 16:15–17:45 CEST",
+      "papers": [
+        "229861"
+      ],
+      "url": "https://programs.sigchi.org/chi/2026/program/session/251934",
+      "startsAt": 1776262500000
+    },
+    {
+      "id": "215410",
+      "name": "Craft-Based Data Physicalization: Opportunities and Challenges",
+      "room": "P1 - Room 115",
+      "time": "Wed, 15 Apr · 18:30–20:00 CEST",
+      "papers": [
+        "214803"
+      ],
+      "url": "https://programs.sigchi.org/chi/2026/program/session/215410",
+      "startsAt": 1776270600000
+    },
+    {
+      "id": "252070",
+      "name": "Posters (Wednesday)",
+      "room": "Area 1 + 2 + 3: posters",
+      "time": "Wed, 15 Apr · 18:30–20:00 CEST",
+      "papers": [
+        "229861"
+      ],
+      "url": "https://programs.sigchi.org/chi/2026/program/session/252070",
+      "startsAt": 1776270600000
+    },
+    {
+      "id": "224954",
+      "name": "Educational Support",
+      "room": "P1 - Room 121",
+      "time": "Thu, 16 Apr · 11:00–12:30 CEST",
+      "papers": [
+        "222240"
+      ],
+      "url": "https://programs.sigchi.org/chi/2026/program/session/224954",
+      "startsAt": 1776330000000
+    },
+    {
+      "id": "224952",
+      "name": "Multi-Agent Reasoning Systems for Sensemaking and Planning",
+      "room": "P1 - Room 134",
+      "time": "Fri, 17 Apr · 11:00–12:30 CEST",
+      "papers": [
+        "222461"
+      ],
+      "url": "https://programs.sigchi.org/chi/2026/program/session/224952",
+      "startsAt": 1776416400000
+    },
+    {
+      "id": "225056",
+      "name": "Expression and Affective Wellbeing",
+      "room": "P1 - Room 124",
+      "time": "Fri, 17 Apr · 11:00–12:30 CEST",
+      "papers": [
+        "222912"
+      ],
+      "url": "https://programs.sigchi.org/chi/2026/program/session/225056",
+      "startsAt": 1776416400000
+    },
+    {
+      "id": "225063",
+      "name": "AI for Youth Learning",
+      "room": "P1 - Room 129",
+      "time": "Fri, 17 Apr · 11:00–12:30 CEST",
+      "papers": [
+        "222312"
+      ],
+      "url": "https://programs.sigchi.org/chi/2026/program/session/225063",
+      "startsAt": 1776416400000
+    }
+  ]
+}

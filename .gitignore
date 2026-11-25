@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+.DS_Store
+
+# Généré par scripts/room-tools.mjs (npm run dev/build) depuis node_modules
+public/room-tools/
+
+# Notes privées : analyses de l'API, doc, consignes (jamais versionné)
+private/
