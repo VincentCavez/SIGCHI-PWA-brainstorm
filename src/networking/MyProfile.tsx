@@ -137,6 +137,8 @@ export function MyProfile({ p, cloud, onOpenMenu }: { p: Program; cloud: Cloud; 
 
             <ProfileSection
               title="Topics"
+              // Les topics font partie du profil public : même audience que le profil.
+              audience={previewing ? undefined : audienceName(me.rules.profile)}
               onEdit={previewing || editing === "topics" ? undefined : () => setEditing("topics")}
               editLabel="Edit topics"
             >

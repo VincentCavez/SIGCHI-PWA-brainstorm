@@ -10,6 +10,10 @@ import { conferencePrefix, conferences, defaultConference, type DemoConference }
 import { storageKey } from "./lib/pages-api";
 
 const MEMBER_KEY = "np.member.";
+const SEEDED_KEY = "np.demo-seeded.";
+
+/** Contenu pré-rempli d'un profil de démonstration. */
+export type ProfileSeed = { topics: string[]; website: string; room: string };
 
 const normalize = (s: string) => s.normalize("NFKD").replace(/\p{M}/gu, "").trim().toLowerCase();
 
@@ -46,8 +50,9 @@ function useNetworkingState(
   accountKey: string,
   demoEvent: DemoConference | null,
   onSelectConference: (shortName: string, year: number) => void,
-  autoProfile: boolean,
+  profileSeed: ProfileSeed | null,
 ) {
+  const autoProfile = profileSeed !== null;
   const event = demoEvent ?? defaultConference;
   const [viewer, setViewer] = useState<string | null>(() => initialViewer(userName, accountKey));
   const [view, setView] = useState<View | null>(null);
@@ -160,6 +165,35 @@ function useNetworkingState(
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [autoProfile, viewer, view, userName]);
 
+  // Puis on le remplit une fois par conférence (topics, site, salle, tout visible des participants),
+  // et on renouvelle le check-in quand il a expiré (il dure 1 h) pour que la démo ne soit jamais vide.
+  const seeding = useRef(false);
+  useEffect(() => {
+    const me = view?.own;
+    if (!profileSeed || !viewer || !me || seeding.current) return;
+    const seededKey = SEEDED_KEY + viewer + "." + event.id;
+    const firstTime = !safeGet(seededKey);
+    const room = event.rooms.includes(profileSeed.room) ? profileSeed.room : event.rooms[0];
+    if (!firstTime && me.checkIn) return;
+    seeding.current = true;
+    const patch = (field: string, value: unknown) => callApi(prefix + "me/sharing", viewer, "PATCH", { field, value });
+    (async () => {
+      if (firstTime) {
+        await patch("topics", profileSeed.topics);
+        await patch("links", { website: profileSeed.website, scholar: "" });
+        await patch("audience.links", audience(true));
+        await patch("audience.currentRoom", audience(true));
+      }
+      if (room) await patch("checkIn", { room });
+      safeSet(seededKey, "1");
+      setView(await loadView(viewer, event.id));
+    })()
+      .catch(() => {})
+      .finally(() => {
+        seeding.current = false;
+      });
+  }, [profileSeed, viewer, view, event, prefix]);
+
   async function savePreference(route: string, body: unknown, confirmation = "Changes saved for " + event.name) {
     if (busy || !viewer) return;
     setBusy(true);
@@ -229,18 +263,18 @@ export function NetworkingProvider({
   accountKey,
   demoEvent,
   onSelectConference,
-  autoProfile = false,
+  profileSeed = null,
   children,
 }: {
   userName: string;
   accountKey: string;
   demoEvent: DemoConference | null;
   onSelectConference: (shortName: string, year: number) => void;
-  /** Crée le profil automatiquement (profil de démonstration). */
-  autoProfile?: boolean;
+  /** Profil de démonstration : créé et pré-rempli automatiquement. */
+  profileSeed?: ProfileSeed | null;
   children: ReactNode;
 }) {
-  const state = useNetworkingState(userName, accountKey, demoEvent, onSelectConference, autoProfile);
+  const state = useNetworkingState(userName, accountKey, demoEvent, onSelectConference, profileSeed);
   return <Ctx.Provider value={state}>{children}</Ctx.Provider>;
 }
 

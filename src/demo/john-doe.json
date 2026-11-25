@@ -6,6 +6,16 @@
   "user_name": "johndoe",
   "acm_id": "demo-john-doe"
  },
+ "networking": {
+  "topics": [
+   "Data visualization",
+   "Accessibility",
+   "Creativity support",
+   "Human-AI interaction"
+  ],
+  "website": "https://www.johndoe.com",
+  "room": "P1 - Room 129"
+ },
  "data": {
   "myScheduleSessions": [
    {
