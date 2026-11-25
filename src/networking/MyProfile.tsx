@@ -66,7 +66,8 @@ export function MyProfile({ p, cloud, onOpenMenu }: { p: Program; cloud: Cloud; 
               </button>
             </div>
           )}
-          <AccountPanels p={p} cloud={cloud} userName={n.userName} />
+          {/* Notifications et Settings ne concernent que la personne : absents en aperçu. */}
+          {!previewing && <AccountPanels p={p} cloud={cloud} userName={n.userName} />}
         </>
       }
     >
@@ -90,10 +91,10 @@ export function MyProfile({ p, cloud, onOpenMenu }: { p: Program; cloud: Cloud; 
               </div>
             </div>
 
-            <div className="profileSettingsRow">
-              <ConferencePicker />
-              {/* En aperçu (vue d'un autre participant), pas de réglage de visibilité ni d'explication. */}
-              {!previewing && (
+            {/* En aperçu (vue d'un autre participant), ni sélecteur de conférence, ni réglage de visibilité. */}
+            {!previewing && (
+              <div className="profileSettingsRow">
+                <ConferencePicker />
                 <AudienceControl
                   primary
                   label="Who can see my profile at this conference?"
@@ -102,8 +103,8 @@ export function MyProfile({ p, cloud, onOpenMenu }: { p: Program; cloud: Cloud; 
                   busy={busy}
                   save={(a) => change("audience.profile", a)}
                 />
-              )}
-            </div>
+              </div>
+            )}
             {!previewing && (
               <p className="sharingExplanation">
                 {me.rules.profile.mode === "private"
