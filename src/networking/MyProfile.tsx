@@ -92,30 +92,35 @@ export function MyProfile({ p, cloud, onOpenMenu }: { p: Program; cloud: Cloud; 
 
             <div className="profileSettingsRow">
               <ConferencePicker />
-              <AudienceControl
-                primary
-                label="Who can see my profile at this conference?"
-                rule={me.rules.profile}
-                people={recipients}
-                busy={busy}
-                save={(a) => change("audience.profile", a)}
-              />
+              {/* En aperçu (vue d'un autre participant), pas de réglage de visibilité ni d'explication. */}
+              {!previewing && (
+                <AudienceControl
+                  primary
+                  label="Who can see my profile at this conference?"
+                  rule={me.rules.profile}
+                  people={recipients}
+                  busy={busy}
+                  save={(a) => change("audience.profile", a)}
+                />
+              )}
             </div>
-            <p className="sharingExplanation">
-              {me.rules.profile.mode === "private"
-                ? "Your profile, lists, plans, and room are private at " + event.name + "."
-                : me.rules.profile.mode === "selected"
-                  ? "Only the people you choose at " + event.name + " can see what you share."
-                  : "People at " +
-                    event.name +
-                    " can see your profile. You choose whether to share your lists, plans, or room."}
-            </p>
+            {!previewing && (
+              <p className="sharingExplanation">
+                {me.rules.profile.mode === "private"
+                  ? "Your profile, lists, plans, and room are private at " + event.name + "."
+                  : me.rules.profile.mode === "selected"
+                    ? "Only the people you choose at " + event.name + " can see what you share."
+                    : "People at " +
+                      event.name +
+                      " can see your profile. You choose whether to share your lists, plans, or room."}
+              </p>
+            )}
 
             <ConferencePublications p={p} name={me.name} editable={!previewing} />
 
             <ProfileSection
               title="Current room"
-              audience={audienceName(me.rules.currentRoom)}
+              audience={previewing ? undefined : audienceName(me.rules.currentRoom)}
               onEdit={previewing ? undefined : () => nav.go("current-room")}
               editLabel="Edit current room"
             >
@@ -179,7 +184,7 @@ export function MyProfile({ p, cloud, onOpenMenu }: { p: Program; cloud: Cloud; 
 
             <ProfileSection
               title="Research links"
-              audience={audienceName(me.rules.links)}
+              audience={previewing ? undefined : audienceName(me.rules.links)}
               onEdit={previewing || editing === "links" ? undefined : () => setEditing("links")}
               editLabel="Edit research links"
             >
@@ -253,7 +258,7 @@ export function MyProfile({ p, cloud, onOpenMenu }: { p: Program; cloud: Cloud; 
                 <div key={l.id} className="ownList">
                   <div className="ownListHead">
                     <b>{l.name}</b>
-                    <span className="audienceTag">{audienceName(me.rules["list." + l.id])}</span>
+                    {!previewing && <span className="audienceTag">{audienceName(me.rules["list." + l.id])}</span>}
                   </div>
                   {l.paperIds.length ? (
                     <ul className="lines">
