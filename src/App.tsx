@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useCloud, useProgram } from "./hooks";
+import { isDemo } from "./api/cloud";
 import { GLOBAL_PAGES, Sidebar, type Page } from "./components/Sidebar";
 import { ProgramPage } from "./components/ProgramPage";
 import { LoginWall, PageHeader, shortTitle } from "./components/PageHeader";
@@ -175,6 +176,7 @@ export default function App() {
             userName={userName}
             accountKey={accountKey}
             demoEvent={demoEventFor(conf.shortName, conf.year)}
+            autoProfile={isDemo}
             // Sélecteur de conférence de My profile : on reste sur la page courante après le rechargement.
             onSelectConference={(shortName, year) => selectConference(shortName, year, page)}
           >

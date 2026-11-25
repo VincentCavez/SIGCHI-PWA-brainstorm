@@ -4,7 +4,7 @@
 // d'en créer un (privé par défaut), comme dans la démo.
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { personas as seedViewers } from "./lib/demo-fixtures";
-import type { Audience, Identity, View } from "./lib/network-model";
+import { audience, type Audience, type Identity, type View } from "./lib/network-model";
 import { callApi, loadView } from "./lib/client-api";
 import { conferencePrefix, conferences, defaultConference, type DemoConference } from "./lib/conferences";
 import { storageKey } from "./lib/pages-api";
@@ -46,6 +46,7 @@ function useNetworkingState(
   accountKey: string,
   demoEvent: DemoConference | null,
   onSelectConference: (shortName: string, year: number) => void,
+  autoProfile: boolean,
 ) {
   const event = demoEvent ?? defaultConference;
   const [viewer, setViewer] = useState<string | null>(() => initialViewer(userName, accountKey));
@@ -129,25 +130,35 @@ function useNetworkingState(
     if (next) onSelectConference("CHI", next.year);
   }
 
-  async function createProfile(name: string, audience: Audience) {
+  async function createProfile(name: string, rule: Audience, quiet = false) {
     if (busy) return;
     setBusy(true);
     setError("");
     try {
       const r = await callApi<{ id: string; error?: string }>(prefix + "profiles", asViewer, "POST", {
         name,
-        audience,
+        audience: rule,
       });
       if (r.status !== 201) throw Error(r.data.error || "Could not create profile.");
       safeSet(MEMBER_KEY + accountKey, r.data.id);
       setViewer(r.data.id);
-      setNotice("Your profile is ready");
+      if (!quiet) setNotice("Your profile is ready");
     } catch (e) {
       setError((e as Error).message);
     } finally {
       setBusy(false);
     }
   }
+
+  // Profil de démonstration : le profil existe d'emblée (visible par tous les participants),
+  // sans passer par l'écran « Create your conference profile ».
+  const autoStarted = useRef(false);
+  useEffect(() => {
+    if (!autoProfile || viewer || !view || autoStarted.current) return;
+    autoStarted.current = true;
+    void createProfile(userName, audience(true), true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoProfile, viewer, view, userName]);
 
   async function savePreference(route: string, body: unknown, confirmation = "Changes saved for " + event.name) {
     if (busy || !viewer) return;
@@ -188,6 +199,7 @@ function useNetworkingState(
 
   return {
     userName,
+    autoProfile,
     supported: demoEvent !== null,
     event,
     selectEvent,
@@ -217,15 +229,18 @@ export function NetworkingProvider({
   accountKey,
   demoEvent,
   onSelectConference,
+  autoProfile = false,
   children,
 }: {
   userName: string;
   accountKey: string;
   demoEvent: DemoConference | null;
   onSelectConference: (shortName: string, year: number) => void;
+  /** Crée le profil automatiquement (profil de démonstration). */
+  autoProfile?: boolean;
   children: ReactNode;
 }) {
-  const state = useNetworkingState(userName, accountKey, demoEvent, onSelectConference);
+  const state = useNetworkingState(userName, accountKey, demoEvent, onSelectConference, autoProfile);
   return <Ctx.Provider value={state}>{children}</Ctx.Provider>;
 }
 

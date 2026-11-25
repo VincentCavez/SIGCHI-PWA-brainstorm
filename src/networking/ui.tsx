@@ -127,7 +127,7 @@ export function NetworkingFrame({
                 </p>
               </div>
             </div>
-          ) : !view ? (
+          ) : !view || (!me && n.autoProfile) ? (
             <div role="status" className="reading">
               <div className="panel joinCard">Loading the demo…</div>
             </div>
