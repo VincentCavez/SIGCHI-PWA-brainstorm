@@ -1,0 +1,474 @@
+{
+ "_comment": "Profil de démonstration fictif (John Doe) : sessions et contenus réels du programme public CHI 2026, choix fictifs.",
+ "user": {
+  "first_name": "John",
+  "last_name": "Doe",
+  "user_name": "johndoe",
+  "acm_id": "demo-john-doe"
+ },
+ "data": {
+  "myScheduleSessions": [
+   {
+    "isAdded": true,
+    "actionDate": 1775900000000,
+    "conferenceId": 10142,
+    "sessionId": 214933,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775900000000,
+      "contentId": 251828
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775900000000,
+      "contentId": 214894
+     }
+    ]
+   },
+   {
+    "isAdded": true,
+    "actionDate": 1775903600000,
+    "conferenceId": 10142,
+    "sessionId": 224929,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775903600000,
+      "contentId": 221926
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775903600000,
+      "contentId": 222726
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775903600000,
+      "contentId": 221968
+     }
+    ]
+   },
+   {
+    "isAdded": true,
+    "actionDate": 1775907200000,
+    "conferenceId": 10142,
+    "sessionId": 223560,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775907200000,
+      "contentId": 221868
+     }
+    ]
+   },
+   {
+    "isAdded": true,
+    "actionDate": 1775910800000,
+    "conferenceId": 10142,
+    "sessionId": 230282,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775910800000,
+      "contentId": 224317
+     }
+    ]
+   },
+   {
+    "isAdded": true,
+    "actionDate": 1775914400000,
+    "conferenceId": 10142,
+    "sessionId": 251835,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775914400000,
+      "contentId": 229671
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775914400000,
+      "contentId": 229672
+     }
+    ]
+   },
+   {
+    "isAdded": true,
+    "actionDate": 1775918000000,
+    "conferenceId": 10142,
+    "sessionId": 224959,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775918000000,
+      "contentId": 222598
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775918000000,
+      "contentId": 223419
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775918000000,
+      "contentId": 223530
+     }
+    ]
+   },
+   {
+    "isAdded": true,
+    "actionDate": 1775921600000,
+    "conferenceId": 10142,
+    "sessionId": 225157,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775921600000,
+      "contentId": 222997
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775921600000,
+      "contentId": 222874
+     }
+    ]
+   },
+   {
+    "isAdded": true,
+    "actionDate": 1775925200000,
+    "conferenceId": 10142,
+    "sessionId": 225714,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775925200000,
+      "contentId": 225658
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775925200000,
+      "contentId": 225616
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775925200000,
+      "contentId": 225598
+     }
+    ]
+   },
+   {
+    "isAdded": true,
+    "actionDate": 1775928800000,
+    "conferenceId": 10142,
+    "sessionId": 252069,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775928800000,
+      "contentId": 225821
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775928800000,
+      "contentId": 225831
+     }
+    ]
+   },
+   {
+    "isAdded": true,
+    "actionDate": 1775932400000,
+    "conferenceId": 10142,
+    "sessionId": 225156,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775932400000,
+      "contentId": 223107
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775932400000,
+      "contentId": 221866
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775932400000,
+      "contentId": 223044
+     }
+    ]
+   },
+   {
+    "isAdded": true,
+    "actionDate": 1775936000000,
+    "conferenceId": 10142,
+    "sessionId": 224973,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775936000000,
+      "contentId": 223519
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775936000000,
+      "contentId": 222888
+     }
+    ]
+   },
+   {
+    "isAdded": true,
+    "actionDate": 1775939600000,
+    "conferenceId": 10142,
+    "sessionId": 223546,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775939600000,
+      "contentId": 221869
+     }
+    ]
+   },
+   {
+    "isAdded": true,
+    "actionDate": 1775943200000,
+    "conferenceId": 10142,
+    "sessionId": 224926,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775943200000,
+      "contentId": 223150
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775943200000,
+      "contentId": 222229
+     }
+    ]
+   },
+   {
+    "isAdded": true,
+    "actionDate": 1775946800000,
+    "conferenceId": 10142,
+    "sessionId": 225116,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775946800000,
+      "contentId": 222136
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775946800000,
+      "contentId": 221981
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775946800000,
+      "contentId": 222988
+     }
+    ]
+   },
+   {
+    "isAdded": true,
+    "actionDate": 1775950400000,
+    "conferenceId": 10142,
+    "sessionId": 230285,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775950400000,
+      "contentId": 224318
+     }
+    ]
+   },
+   {
+    "isAdded": true,
+    "actionDate": 1775954000000,
+    "conferenceId": 10142,
+    "sessionId": 252056,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775954000000,
+      "contentId": 229761
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775954000000,
+      "contentId": 229656
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775954000000,
+      "contentId": 230259
+     }
+    ]
+   },
+   {
+    "isAdded": true,
+    "actionDate": 1775957600000,
+    "conferenceId": 10142,
+    "sessionId": 224987,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775957600000,
+      "contentId": 222157
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775957600000,
+      "contentId": 223062
+     }
+    ]
+   },
+   {
+    "isAdded": true,
+    "actionDate": 1775961200000,
+    "conferenceId": 10142,
+    "sessionId": 224960,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775961200000,
+      "contentId": 222224
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775961200000,
+      "contentId": 223513
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775961200000,
+      "contentId": 222262
+     }
+    ]
+   },
+   {
+    "isAdded": true,
+    "actionDate": 1775964800000,
+    "conferenceId": 10142,
+    "sessionId": 215056,
+    "myScheduleContents": [
+     {
+      "isAdded": true,
+      "actionDate": 1775964800000,
+      "contentId": 214895
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775964800000,
+      "contentId": 251831
+     }
+    ]
+   }
+  ],
+  "myLists": [
+   {
+    "id": "default",
+    "name": "Reading list",
+    "isDefault": true,
+    "isDeleted": false,
+    "actionDate": 1775900000000,
+    "myListItems": [
+     {
+      "isAdded": true,
+      "actionDate": 1775900000000,
+      "conferenceId": 10142,
+      "contentId": 221926
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775900060000,
+      "conferenceId": 10142,
+      "contentId": 221968
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775900120000,
+      "conferenceId": 10142,
+      "contentId": 222065
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775900180000,
+      "conferenceId": 10142,
+      "contentId": 222321
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775900240000,
+      "conferenceId": 10142,
+      "contentId": 223419
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775900300000,
+      "conferenceId": 10142,
+      "contentId": 221870
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775900360000,
+      "conferenceId": 10142,
+      "contentId": 221842
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775900420000,
+      "conferenceId": 10142,
+      "contentId": 221843
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775900480000,
+      "conferenceId": 10142,
+      "contentId": 221844
+     }
+    ]
+   },
+   {
+    "id": "5d6f1c2e-0000-4000-8000-00000000d0e1",
+    "name": "Accessibility ideas",
+    "isDefault": false,
+    "isDeleted": false,
+    "actionDate": 1775900000001,
+    "myListItems": [
+     {
+      "isAdded": true,
+      "actionDate": 1775900000001,
+      "conferenceId": 10142,
+      "contentId": 221872
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775900060001,
+      "conferenceId": 10142,
+      "contentId": 221923
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775900120001,
+      "conferenceId": 10142,
+      "contentId": 221931
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775900180001,
+      "conferenceId": 10142,
+      "contentId": 221968
+     },
+     {
+      "isAdded": true,
+      "actionDate": 1775900240001,
+      "conferenceId": 10142,
+      "contentId": 222068
+     }
+    ]
+   }
+  ]
+ }
+}

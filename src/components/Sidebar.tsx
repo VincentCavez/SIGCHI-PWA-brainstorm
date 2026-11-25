@@ -22,7 +22,7 @@ import {
   X,
   type LucideIcon,
 } from "lucide-react";
-import { hasClientId, logout, startLogin } from "../api/cloud";
+import { hasClientId, isDemo, logout, startLogin } from "../api/cloud";
 import type { Program } from "../api/program";
 import type { Cloud } from "../hooks";
 
@@ -161,7 +161,7 @@ export function Sidebar({
             <button
               className="side-login"
               disabled={!hasClientId}
-              title={hasClientId ? "Log in with your ACM account" : "Log in is not available on this version of the site"}
+              title={isDemo ? "Log in with the demo profile (John Doe)" : hasClientId ? "Log in with your ACM account" : "Log in is not available on this version of the site"}
               onClick={() => startLogin()}
             >
               Log In

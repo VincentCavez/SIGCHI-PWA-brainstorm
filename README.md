@@ -21,12 +21,13 @@ Toute la configuration passe par un fichier `.env` (ignoré par git) : copier `.
 | `SIGCHI_PROGRAM_URL` | Programme d'une conférence (gabarit avec `{shortName}` et `{year}`). |
 | `SIGCHI_LOGIN_URL`, `SIGCHI_CLOUD_READ_URL`, `SIGCHI_APP_SIGNATURE`, `SIGCHI_CLIENT_ID` | Connexion avec un compte SIGCHI (optionnelle). Sans `SIGCHI_CLIENT_ID`, le bouton Log In est désactivé. |
 | `SIGCHI_USER_TOKEN` | Optionnel, développement uniquement ; ignoré au build. |
+| `SIGCHI_DEMO_MODE` | `true` sans `SIGCHI_CLIENT_ID` : Log In connecte le profil fictif **John Doe** (`src/demo/john-doe.json`), sans appel au login SIGCHI. |
 
 Vite ne relit `.env` qu'au démarrage : redémarrer `npm run dev` après une modification.
 
 ## Déploiement
 
-`.github/workflows/pages.yml` construit le site et le publie sur GitHub Pages à chaque push sur `main`. Il lit uniquement les secrets `SIGCHI_PROGRAM_LIST_URL` et `SIGCHI_PROGRAM_URL` : le site publié n'a pas de connexion SIGCHI, et aucun identifiant personnel n'y est inclus.
+`.github/workflows/pages.yml` construit le site et le publie sur GitHub Pages à chaque push sur `main`. Il lit uniquement les secrets `SIGCHI_PROGRAM_LIST_URL` et `SIGCHI_PROGRAM_URL` et active `SIGCHI_DEMO_MODE` : sur le site publié, Log In connecte le profil fictif John Doe (programme de 19 sessions et 2 listes de lecture sur des contenus réels de CHI 2026). Aucun identifiant personnel n'y est inclus.
 
 ## Crédits
 

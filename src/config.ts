@@ -38,4 +38,6 @@ export const config = {
   clientId: optional("SIGCHI_CLIENT_ID"),
   /** Token de secours pour le dev ; neutralisé au build (vite.config.ts). */
   envToken: optional("SIGCHI_USER_TOKEN"),
+  /** Mode démo : sans clientId, « Log In » connecte le profil fictif John Doe (src/demo). */
+  demoMode: optional("SIGCHI_DEMO_MODE") === "true",
 };

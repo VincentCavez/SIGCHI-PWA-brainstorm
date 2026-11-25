@@ -2,15 +2,30 @@
 // URLs et identifiants : voir src/config.ts et .env.
 import { config } from "../config";
 import type { CloudReadAllResponse, MyList, MyScheduleSession } from "./types";
+import demoProfile from "../demo/john-doe.json";
 
 const CLIENT_ID = config.clientId;
 const ENV_TOKEN = config.envToken;
 const TOKEN_KEY = "sigchi-user-token";
 
-export const hasClientId = Boolean(CLIENT_ID);
+/**
+ * Mode démo (SIGCHI_DEMO_MODE=true, sans clientId) : « Log In » connecte un profil fictif, John Doe,
+ * dont le programme et les listes viennent de src/demo/john-doe.json. Aucun appel au login ni à l'API cloud.
+ */
+export const isDemo = config.demoMode && !CLIENT_ID;
+const DEMO_TOKEN = "demo-john-doe";
+const DEMO_KEY = "sigchi-demo-session";
+
+/** Vrai si le bouton Log In peut fonctionner (vrai login ou profil de démo). */
+export const hasClientId = Boolean(CLIENT_ID) || isDemo;
 
 /** Redirige vers la page de login SIGCHI ; elle revient ici avec ?token=JWT. */
 export function startLogin(callbackUrl = `${window.location.origin}${import.meta.env.BASE_URL}`): void {
+  if (isDemo) {
+    safeSet(DEMO_KEY, "1");
+    window.location.reload();
+    return;
+  }
   if (!CLIENT_ID) throw new Error("SIGCHI_CLIENT_ID manquant dans .env");
   const url = `${config.loginUrl}?clientId=${encodeURIComponent(CLIENT_ID)}&callback=${encodeURIComponent(callbackUrl)}`;
   window.location.assign(url);
@@ -26,6 +41,7 @@ const isJwt = (t: string | null | undefined): t is string => !!t && JWT_RE.test(
  * Une valeur qui n'a pas la forme d'un JWT est ignorée (et effacée du localStorage).
  */
 export function getToken(): string | null {
+  if (isDemo) return safeGet(DEMO_KEY) ? DEMO_TOKEN : null;
   const params = new URLSearchParams(window.location.search);
   const fromUrl = params.get("token");
   if (fromUrl != null) {
@@ -47,6 +63,7 @@ export function getToken(): string | null {
 export function logout(): void {
   try {
     localStorage.removeItem(TOKEN_KEY);
+    localStorage.removeItem(DEMO_KEY);
   } catch {
     /* ignore */
   }
@@ -54,6 +71,7 @@ export function logout(): void {
 
 /** Décode le payload du JWT (sans vérifier la signature) : nom, username, exp... */
 export function decodeToken(token: string): Record<string, unknown> | null {
+  if (token === DEMO_TOKEN) return { ...demoProfile.user };
   try {
     const part = token.split(".")[1];
     const json = atob(part.replace(/-/g, "+").replace(/_/g, "/"));
@@ -64,6 +82,7 @@ export function decodeToken(token: string): Record<string, unknown> | null {
 }
 
 export async function readAll(token: string, lastSyncDate = 0): Promise<CloudReadAllResponse> {
+  if (token === DEMO_TOKEN) return structuredClone(demoProfile.data) as CloudReadAllResponse;
   const res = await fetch(config.cloudReadUrl, {
     method: "POST",
     headers: {

@@ -1,7 +1,8 @@
 # Build Vite + déploiement GitHub Pages à chaque push sur main (aucune branche gh-pages).
 # Prérequis : Settings > Pages > Source = « GitHub Actions », et les secrets de dépôt
 # SIGCHI_PROGRAM_LIST_URL et SIGCHI_PROGRAM_URL (Settings > Secrets and variables > Actions).
-# Volontairement absents : clientId, URLs de connexion, token. Le site publié n'a pas de login.
+# Volontairement absents : clientId, URLs de connexion, token. Le site publié n'a pas de vrai login,
+# seulement le profil de démonstration John Doe (SIGCHI_DEMO_MODE).
 name: Deploy to GitHub Pages
 
 on:
@@ -34,6 +35,8 @@ jobs:
         env:
           SIGCHI_PROGRAM_LIST_URL: ${{ secrets.SIGCHI_PROGRAM_LIST_URL }}
           SIGCHI_PROGRAM_URL: ${{ secrets.SIGCHI_PROGRAM_URL }}
+          # Site public : profil de démonstration John Doe à la place du vrai login.
+          SIGCHI_DEMO_MODE: "true"
           PAGES_BASE: /${{ github.event.repository.name }}/
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
