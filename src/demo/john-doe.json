@@ -14,7 +14,8 @@
    "Human-AI interaction"
   ],
   "website": "https://www.johndoe.com",
-  "room": "P1 - Room 129"
+  "room": "P1 - Room 125",
+  "checkInUntil": "15:45"
  },
  "data": {
   "myScheduleSessions": [

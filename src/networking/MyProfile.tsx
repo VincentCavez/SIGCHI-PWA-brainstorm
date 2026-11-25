@@ -128,7 +128,7 @@ export function MyProfile({ p, cloud, onOpenMenu }: { p: Program; cloud: Cloud; 
               {me.checkIn ? (
                 <div className="checkStatus">
                   <b>Current room</b> · {me.checkIn.room} · until{" "}
-                  {new Date(me.checkIn.expiresAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+                  {new Date(me.checkIn.expiresAt).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}
                 </div>
               ) : (
                 <small>No active check-in.</small>

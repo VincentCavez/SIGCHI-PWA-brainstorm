@@ -8,7 +8,8 @@ export const conference = {
   source: "https://programs.sigchi.org/chi/2026/program",
 };
 export const { papers, sessions } = program;
-export const rooms = [...new Set(sessions.map((s) => s.room))].sort();
+// Salles des sessions de la démo, plus P1 - Room 125 (salle réelle du programme CHI 2026, utilisée par le profil John Doe).
+export const rooms = [...new Set([...sessions.map((s) => s.room), "P1 - Room 125"])].sort();
 export type Links = { website: string; scholar: string };
 type Affiliation = {
   affiliation: string;

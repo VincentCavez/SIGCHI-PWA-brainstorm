@@ -259,11 +259,18 @@ export function serve(
       save(field, { website: value.website, scholar: value.scholar });
     else if (
       field === "checkIn" &&
-      (value === null || (rooms.includes(value?.room) && (value.countMe === undefined || typeof value.countMe === "boolean")))
+      (value === null ||
+        (rooms.includes(value?.room) &&
+          (value.countMe === undefined || typeof value.countMe === "boolean") &&
+          // Fin choisie (profil de démo) : dans les 24 h à venir ; sinon 1 h.
+          (value.until === undefined ||
+            (typeof value.until === "number" && value.until > now && value.until <= now + 86400000))))
     )
       save(
         field,
-        value ? { room: value.room, expiresAt: now + 3600000, ...(value.countMe === true ? {countMe: true} : {}) } : null,
+        value
+          ? { room: value.room, expiresAt: value.until ?? now + 3600000, ...(value.countMe === true ? { countMe: true } : {}) }
+          : null,
       );
     else if (
       me.lists.some((l) => field === "papers." + l.id) &&

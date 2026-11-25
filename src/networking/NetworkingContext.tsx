@@ -10,10 +10,20 @@ import { conferencePrefix, conferences, defaultConference, type DemoConference }
 import { storageKey } from "./lib/pages-api";
 
 const MEMBER_KEY = "np.member.";
-const SEEDED_KEY = "np.demo-seeded.";
+const SEEDED_KEY = "np.demo-seeded.v2.";
 
 /** Contenu pré-rempli d'un profil de démonstration. */
-export type ProfileSeed = { topics: string[]; website: string; room: string };
+export type ProfileSeed = { topics: string[]; website: string; room: string; checkInUntil: string };
+
+/** Prochaine occurrence de l'heure "HH:MM" (heure locale du visiteur). */
+function nextTime(hhmm: string): number | undefined {
+  const m = /^(\d{1,2}):(\d{2})$/.exec(hhmm);
+  if (!m) return undefined;
+  const d = new Date();
+  d.setHours(Number(m[1]), Number(m[2]), 0, 0);
+  if (d.getTime() <= Date.now()) d.setDate(d.getDate() + 1);
+  return d.getTime();
+}
 
 const normalize = (s: string) => s.normalize("NFKD").replace(/\p{M}/gu, "").trim().toLowerCase();
 
@@ -184,7 +194,7 @@ function useNetworkingState(
         await patch("audience.links", audience(true));
         await patch("audience.currentRoom", audience(true));
       }
-      if (room) await patch("checkIn", { room });
+      if (room) await patch("checkIn", { room, until: nextTime(profileSeed.checkInUntil) });
       safeSet(seededKey, "1");
       setView(await loadView(viewer, event.id));
     })()

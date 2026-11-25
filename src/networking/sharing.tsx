@@ -180,8 +180,8 @@ export function CheckInPanel({
       {me.checkIn && (
         <p>
           Checked into <strong>{me.checkIn.room}</strong> until{" "}
-          {new Date(me.checkIn.expiresAt).toLocaleTimeString([], {
-            hour: "2-digit",
+          {new Date(me.checkIn.expiresAt).toLocaleTimeString("en-US", {
+            hour: "numeric",
             minute: "2-digit",
           })}
           .
